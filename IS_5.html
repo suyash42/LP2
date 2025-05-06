@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>diffe-hellman key exchange algorithm</title>
+</head>
+
+<body>
+    <h2>diffe-hellman key exchange algorithm</h2>
+    <script>
+        function power(a, b, p) {
+            if (b == 1)
+                return a;
+            else
+                return ((Math.pow(a, b)) % p);
+        }
+        var P, G, x, a, y, b, ka, kb;
+        P = 23;
+        document.write("the value of P:" + P + "<br>");
+        G = 9;
+        document.write("the value of G:" + G + "<br>");
+        a = 4;
+        document.write("the private key of person one:" + a + "<br>");
+        x = power(G, a, P);
+        b = 3;
+        document.write("the private key of person second:" + b + "<br>");
+        y = power(G, b, P);
+        ka = power(y, a, P);
+        document.write("the secrete key for a:" + ka + "<br>");
+        kb = power(x, b, P);
+        document.write("the secrete key for b:" + kb + "<br>");
+    </script>
+</body>
+
+</html>
