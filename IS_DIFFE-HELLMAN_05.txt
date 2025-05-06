@@ -1,0 +1,23 @@
+def power(a, b, p):
+     return pow(a, b) % p
+ 
+ P = 11
+ G = 7
+ 
+ a = 4
+ b = 3
+ 
+ x = power(a=G, b=a, p=P)
+ y = power(a=G, b=b, p=P)
+ ka = power(a=y, b=a, p=P)
+ kb = power(a=x, b=b, p=P)
+ 
+ print("P (prime): " + str(P))
+ print("G (base): " + str(G))
+ print("Alice's private key: " + str(a))
+ print("Bob's private key: " + str(b))
+ print("Alice's public key: " + str(x))
+ print("Bob's public key: " + str(y))
+ print("Alice's secret key: " + str(ka))
+ print("Bob's secret key: " + str(kb))
+ print("Shared secret key: " + str(ka))
